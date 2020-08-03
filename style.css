@@ -40,9 +40,7 @@ nav {
   border: 1px solid red;
 }
 
-/*.navbar-header, li {
-	p
-}*/
+
 
 .intro {
   width: 100vw;
@@ -273,45 +271,54 @@ section {
   margin: 0 0 0.5rem;
 }
 
-.myPassion {
-  /*height: 800px;*/
-  /*min-height: 600px;*/
-}
-
-.passion {
+.scrolling-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin: 0 1rem;
+}
+.project {
+ width: 84%;
+ 
+flex: 0 0 auto;
+margin-right: 1rem;
 }
 
-.flex-container {
+.project img {
+  display: block;
+  width: 100%;
+  max-height: 80%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* .flex-container {
   display: flex;
   max-width: 1080px;
-  /*flex-wrap: wrap;*/
+  
   justify-content: space-around;
   align-items: center;
   text-align: center;
-}
+} */
 
-.flex-item {
+/* .flex-item {
   width: 22vw;
   height: 22vw;
   text-align: center;
-}
+} */
 
-.flex-item img {
+/* .flex-item img {
   width: 100%;
   height: 80%;
   display: block;
-}
+} */
 
-.flex-item h3 {
+/* .flex-item h3 {
   padding: 1rem 0;
-}
+} */
 
 .grid-container {
   margin: 0 1rem;
@@ -407,6 +414,12 @@ footer img {
   .intro header {
     margin-top: -200px;
     padding-left: 100px;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .project {
+    width: 65%;
   }
 }
 

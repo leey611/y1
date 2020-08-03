@@ -1,31 +1,31 @@
 $(document).ready(() => {
 
-  
 
 
-  $("header").css({"position":"relative","opacity": 0, "left":"-=50"});
-  $("header").animate({left:0, opacity:1},800);
 
-  $(".intro svg").css({"position":"relative","opacity": 0, "left":"+=50"});
-  $(".intro svg").delay(700).animate({left:0, opacity:1},800);
+  $("header").css({ "position": "relative", "opacity": 0, "left": "-=50" });
+  $("header").animate({ left: 0, opacity: 1 }, 800);
+
+  $(".intro svg").css({ "position": "relative", "opacity": 0, "left": "+=50" });
+  $(".intro svg").delay(700).animate({ left: 0, opacity: 1 }, 800);
 
   window.sr = ScrollReveal({
     reset: false,
     duration: 600,
     easing: 'cubic-bezier(.694,0,.335,1)',
     scale: 1,
-    
+
   });
 
   sr.reveal('.intro');
   sr.reveal('.background', { viewFactor: 0.4 });
   sr.reveal('.skills', { viewFactor: 0.4 });
-  sr.reveal('.myPassion', { viewFactor: 0.4 });
+  sr.reveal('.projects', { viewFactor: 0.4 });
   sr.reveal('.work', { viewFactor: 0.1 });
   // sr.reveal('.experience', { viewFactor: 0.2 });
   sr.reveal('footer');
   // sr.reveal('.other-projects', { viewFactor: 0.05 });
-//ScrollReveal().reveal('.myPassion');
+  //ScrollReveal().reveal('.myPassion');
 })
 
 
@@ -50,7 +50,7 @@ class TypeWriter {
     const fullTxt = this.words[current];
 
     // Check if deleting
-    if(this.isDeleting) {
+    if (this.isDeleting) {
       // Remove char
       this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
@@ -64,17 +64,17 @@ class TypeWriter {
     // Initial Type Speed
     let typeSpeed = 200;
 
-    if(this.isDeleting) {
+    if (this.isDeleting) {
       typeSpeed /= 2;
     }
 
     // If word is complete
-    if(!this.isDeleting && this.txt === fullTxt) {
+    if (!this.isDeleting && this.txt === fullTxt) {
       // Make pause at end
       typeSpeed = this.wait;
       // Set delete to true
       this.isDeleting = true;
-    } else if(this.isDeleting && this.txt === '') {
+    } else if (this.isDeleting && this.txt === '') {
       this.isDeleting = false;
       // Move to next word
       this.wordIndex++;
