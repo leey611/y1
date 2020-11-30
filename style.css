@@ -287,13 +287,16 @@ margin-right: 1rem;
 .project img {
   display: block;
   width: 100%;
+  /* height: 150px; */
   max-height: 80%;
   margin: 0;
   padding: 0;
 }
 
 
-
+.sketch .grid-item img{
+  height: auto;
+}
 
 /* .flex-container {
   display: flex;
@@ -516,5 +519,11 @@ footer img {
   }
   .passion {
     justify-content: space-around;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .project img {
+    height: 350px;
   }
 }
