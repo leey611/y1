@@ -18,6 +18,7 @@ $(document).ready(() => {
   });
 
   sr.reveal('.intro');
+  sr.reveal('.sketch', { viewFactor: 0.4 } );
   sr.reveal('.background', { viewFactor: 0.4 });
   sr.reveal('.skills', { viewFactor: 0.4 });
   sr.reveal('.projects', { viewFactor: 0.4 });
